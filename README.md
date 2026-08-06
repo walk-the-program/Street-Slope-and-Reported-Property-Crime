@@ -16,18 +16,19 @@ declines to offer a fifth it cannot test.
 ## What is here
 
 ```
-src/            analysis pipeline, ~8,000 lines of Python
-outputs/        every result table (48 CSVs), the five manuscript figures,
-                and the submission TIFFs
-data/interim/   the aggregated analytic panels and the harvest manifests
-plos_manuscript.tex      submission manuscript (PLOS template)
-manuscript_general.tex   same content, plain article class — generated, do not edit
-PREREGISTRATION.md       analysis plan and thirteen itemised deviations
-SUPPLEMENT.md            STROBE checklist, table index, specification history
-SUBMISSION.md            journal checklist
+src/                analysis pipeline, ~8,000 lines of Python
+outputs/            every result table (48 CSVs), the five figures, the
+                    classifier validation set and its confusion matrices
+data/interim/       the aggregated analytic panels and the harvest manifests
+AI_DISCLOSURE.md    what is and is not automated, and how it was validated
+requirements.txt    pinned versions
 ```
 
-Every number in the manuscript traces to a named CSV in `outputs/`. Nothing is
+This is the replication package only — code, the panels it runs on, and the
+tables it produces. The manuscript, its supplement and the analysis plan are not
+here; they accompany the submission.
+
+Every number in the paper traces to a named CSV in `outputs/`. Nothing is
 hand-entered.
 
 ## Reproducing the results
@@ -122,19 +123,23 @@ what it reports is a conditional association rather than a demonstration of dete
 ## Data availability statement
 
 All source data are publicly available from the providers listed above. The aggregated
-analytic panels, the complete analysis code, all result tables, the analysis plan with
-its deviations, and the classifier validation set are in this repository. Raw
+analytic panels, the complete analysis code, all result tables, and the classifier validation
+set are in this repository. Raw
 point-level incident downloads and elevation rasters are not redistributed, for the
 reasons given above, and are re-derivable from the manifests in `data/interim/`.
 
 ## Errors and corrections
 
-`PREREGISTRATION.md` carries thirteen itemised deviations from the analysis plan,
-including four silent classifier defects, a post-hoc terrain threshold demoted to a
-sensitivity analysis, a pooling method that was replaced, and one analysis retracted
-and re-run after its models turned out not to have converged. They are recorded
-because the pattern matters: in every case, plausible aggregates and stable
-regressions survived a real defect.
+Thirteen deviations from the analysis plan are itemised in the deviations log
+accompanying the manuscript, including four silent classifier defects, a post-hoc
+terrain threshold demoted to a sensitivity analysis, a pooling method that was
+replaced, and one analysis retracted and re-run after its models turned out not to
+have converged.
+
+They are recorded because the pattern matters: in every case, plausible aggregates
+and stable regressions survived a real defect. That is also why this repository
+carries `src/validate_data.py` and `src/ppml_diagnostics.py` — the analysis checks
+itself rather than asking to be trusted. See `AI_DISCLOSURE.md`.
 
 ## Licence
 

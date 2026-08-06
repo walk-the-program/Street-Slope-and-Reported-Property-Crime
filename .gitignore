@@ -41,3 +41,19 @@ Tracy_Walker_3030_draft.pdf
 Crime_and_Slope_Project_Guide.pdf
 GUIDE.md
 deep-research-report.md
+
+# --- manuscript and submission material ----------------------------------------
+# This repository is the replication package: code, the aggregated panels it runs
+# on, and the tables it produces. The paper, its supplement, the analysis plan,
+# the journal checklist and the conference deck live with the submission, not
+# here.
+plos_manuscript.tex
+manuscript_general.tex
+PREREGISTRATION.md
+SUPPLEMENT.md
+SUBMISSION.md
+PAPER.md
+RESEARCH.md
+DIRECTION.md
+PILOT_RESULTS.md
+talk_slides.html
