@@ -1,0 +1,17 @@
+domain,status,cells
+data.cityofchicago.org,ok,114567
+data.lacity.org,fail: RuntimeError,0
+data.sfgov.org,ok,12129
+data.cincinnati-oh.gov,ok,46622
+data.montgomerycountymd.gov,ok,110852
+data.kcmo.org,ok,113943
+data.brla.gov,ok,47106
+data.buffalony.gov,ok,15784
+data.cityofgainesville.org,fail: RuntimeError,0
+data.princegeorgescountymd.gov,ok,116263
+data.cambridgema.gov,fail: RuntimeError,0
+data.weho.org,ok,3952
+data.cityofnewyork.us,fail: RuntimeError,0
+performance.fultoncountyga.gov,fail: RuntimeError,0
+data.marincounty.gov,ok,131298
+fusioncenter.nhit.org,ok,17445

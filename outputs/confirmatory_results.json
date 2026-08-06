@@ -1,0 +1,65 @@
+{
+  "panel": [
+    "cincinnati-oh",
+    "cos-seattle",
+    "kcmo",
+    "montgomerycountymd",
+    "sfgov"
+  ],
+  "excluded": [
+    "brla",
+    "buffalony",
+    "chicago",
+    "fusioncenter_nhit",
+    "marincounty",
+    "princegeorgescountymd",
+    "weho"
+  ],
+  "H1": {
+    "n_cities": 4,
+    "n_indistinguishable": 4,
+    "pooled_diff": {
+      "k": 4,
+      "pooled_pct": 2.0727139407003214,
+      "lo": -0.43956115643029037,
+      "hi": 4.648382954500785,
+      "z": 1.6135234047681508,
+      "Q": 1.7734212230310071,
+      "I2": 0.0,
+      "substantively_negligible": true
+    },
+    "falsified": true
+  },
+  "H2": {
+    "slope_per_kg": 0.0006147316265514135,
+    "lo": -0.010999939668529192,
+    "hi": 0.01232074698035605,
+    "falsified": true,
+    "n_estimates": 14
+  },
+  "H4": {
+    "n_cities": 4,
+    "n_upper_half": 1
+  },
+  "H5": {
+    "k": 3,
+    "pooled_pct": 3.202328703319335,
+    "lo": -1.7554820531258897,
+    "hi": 8.410330391639388,
+    "z": 1.254908545277751,
+    "Q": 10.430029225714383,
+    "I2": 0.8082459831398014,
+    "substantively_negligible": true,
+    "clean": true
+  },
+  "pooled": {
+    "k": 5,
+    "pooled_pct": 4.340368900363334,
+    "lo": 1.528473544216502,
+    "hi": 7.2301414787110385,
+    "z": 3.0483043579836337,
+    "Q": 59.836909551841664,
+    "I2": 0.9331516278170338,
+    "substantively_negligible": true
+  }
+}

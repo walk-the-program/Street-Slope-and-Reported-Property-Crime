@@ -1,0 +1,6 @@
+city,slug,failed,n,converged,iters,max_abs_score,rel_score,separated
+Charlotte,charlotte,True,19574,False,200,6361.515276280326,0.14428476471490875,635
+Seattle,cos-data_seattle_gov,True,12305,False,200,6403.937426380016,0.03817639422925147,124
+Cincinnati,data_cincinnati-oh_gov,True,18229,False,200,3122.566828652951,0.07047092820250397,8445
+Chicago,data_cityofchicago_org,True,20435,False,200,775.5078125,0.022022087533721424,15763
+"Montgomery Co., MD",data_montgomerycountymd_gov,True,14786,False,200,4722.325176438916,0.11172341195322504,113

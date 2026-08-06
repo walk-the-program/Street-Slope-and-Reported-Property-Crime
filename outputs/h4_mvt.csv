@@ -1,0 +1,5 @@
+city,mvt_rank,n_classes,upper_half
+cos-seattle,4,4,False
+kcmo,4,5,False
+montgomerycountymd,1,4,True
+sfgov,3,3,False

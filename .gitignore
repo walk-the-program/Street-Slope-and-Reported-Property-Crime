@@ -1,0 +1,43 @@
+# --- environment -------------------------------------------------------------
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# --- large or non-redistributable inputs --------------------------------------
+# Raw incident downloads hold point-level coordinates. The paper's ethics
+# statement commits to distributing retrieval scripts and the aggregated
+# analytic units rather than republishing raw point records, and some municipal
+# portals restrict redistribution. Everything here is re-derivable from
+# data/interim/registry.csv and registry_arcgis.csv.
+data/raw/
+cache/
+
+# Superseded intermediate panels. cells/ predates the building-footprint
+# exposure rebuild; cells_exposure/ is the version every reported result uses
+# and IS tracked.
+data/interim/cells/
+data/interim/cells_preclassifierfix/
+data/interim/sf_cells.parquet
+data/interim/probe_raw.csv
+
+# --- build products ------------------------------------------------------------
+*.zip
+*.aux
+*.out
+*.synctex.gz
+outputs/logs/
+
+# --- not part of this study ----------------------------------------------------
+# Unrelated coursework that happens to share this directory.
+4800_Paper.pdf
+NFL paper.pdf
+NFLELO 2.tex
+main.tex
+Tracy_Walker_3030_draft.pdf
+
+# Working documents kept local: an internal reference explicitly marked not for
+# circulation, and a commissioned external review of the manuscript.
+Crime_and_Slope_Project_Guide.pdf
+GUIDE.md
+deep-research-report.md
