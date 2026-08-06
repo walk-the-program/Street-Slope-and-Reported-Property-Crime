@@ -1,0 +1,6 @@
+city,outcome,n,block_groups,reason
+Baltimore,theft,10180,420,"NaN, inf or invalid value detected in weights, estimation in"
+Baltimore,no-loot,10180,420,"NaN, inf or invalid value detected in weights, estimation in"
+Seattle,all property crime,18063,507,"NaN, inf or invalid value detected in weights, estimation in"
+Kansas City,all property crime,30760,458,"NaN, inf or invalid value detected in weights, estimation in"
+Kansas City,theft,30342,452,"NaN, inf or invalid value detected in weights, estimation in"

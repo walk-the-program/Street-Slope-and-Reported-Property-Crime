@@ -67,8 +67,7 @@ PREAMBLE = r"""% ---------------------------------------------------------------
 \renewcommand{\headrulewidth}{0.4pt}
 
 \title{\bfseries __TITLE__}
-\author{Walker Tracy\thanks{University of Utah, Salt Lake City, Utah, United
-States of America. \texttt{walkeratracy@gmail.com}}}
+\author{Walker Tracy\thanks{__AFFIL__ \texttt{walkeratracy@gmail.com}}}
 \date{}
 
 \begin{document}
@@ -104,7 +103,13 @@ def read_title(src):
 def build():
     s = open(SRC).read()
     title, head = read_title(s)
-    preamble = PREAMBLE.replace("__TITLE__", title).replace("__RUNNINGHEAD__", head)
+    # The affiliation was hardcoded here too, which is the same drift that left a
+    # stale title behind. Read it from the master instead.
+    a = re.search(r"\\textbf\{1\}\s*(.+?)\s*\n", s)
+    affil = (a.group(1).strip().rstrip(".") + ".") if a else ""
+    preamble = (PREAMBLE.replace("__TITLE__", title)
+                        .replace("__RUNNINGHEAD__", head)
+                        .replace("__AFFIL__", affil))
 
     # --- body only: everything from \begin{document} onward ------------------
     body = s.split(r"\begin{document}", 1)[1]
