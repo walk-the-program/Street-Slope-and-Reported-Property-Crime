@@ -1,5 +1,7 @@
 # Street slope and reported property crime in nine United States cities
 
+[![DOI](https://zenodo.org/badge/1324652739.svg)](https://doi.org/10.5281/zenodo.21855376)
+
 Replication materials for *Street slope and reported property crime in nine United
 States cities: terrain measurement, target exposure, and tests of candidate
 mechanisms.*
@@ -119,6 +121,15 @@ residential building footprint area rather than land area. Identification is the
 *within neighbourhood*: everything constant across a block group is differenced away.
 That does not make slope as-good-as-random inside one, and the paper is explicit that
 what it reports is a conditional association rather than a demonstration of deterrence.
+
+## Citing this archive
+
+Archived on Zenodo. Cite the version that matches what you ran:
+
+- **Version 1.0.0** — the state the manuscript was written against:
+  https://doi.org/10.5281/zenodo.21855377
+- **All versions** — always resolves to the latest release:
+  https://doi.org/10.5281/zenodo.21855376
 
 ## Data availability statement
 
