@@ -17,7 +17,8 @@ from reportlab.lib.units import inch
 from reportlab.platypus import (BaseDocTemplate, Frame, KeepTogether, PageBreak,
                                 PageTemplate, Paragraph, Spacer, Table, TableStyle)
 
-SRC, DST = "GUIDE.md", "Crime_and_Slope_Project_Guide.pdf"
+SRC = "paper/drafts/GUIDE.md"
+DST = "paper/drafts/Crime_and_Slope_Project_Guide.pdf"
 
 INK = colors.HexColor("#1c1a17")
 INK2 = colors.HexColor("#57534e")

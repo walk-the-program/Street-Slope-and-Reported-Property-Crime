@@ -57,3 +57,18 @@ RESEARCH.md
 DIRECTION.md
 PILOT_RESULTS.md
 talk_slides.html
+
+# The JQC build and both assembled submission packages. These were tracked by
+# accident: .gitignore named the PLOS manuscript but not the JQC one, so the
+# anonymised manuscript, the title page carrying the author's name and ORCID,
+# and both full packages were sitting in a public repository. That defeats the
+# point of double-blind review -- a reviewer searching a distinctive phrase from
+# the paper would land on the author's own GitHub account.
+jqc_manuscript.tex
+jqc_title_page.tex
+Cover_Letter.pdf
+submission/
+jqc_submission/
+paper/
+packages/
+archive/

@@ -23,9 +23,10 @@ from __future__ import annotations
 import os
 import re
 
-SRC = "plos_manuscript.tex"
-DST = "jqc_manuscript.tex"
-TITLE_PAGE = "jqc_title_page.tex"
+PAPER = "paper"
+SRC = f"{PAPER}/plos_manuscript.tex"
+DST = f"{PAPER}/jqc_manuscript.tex"
+TITLE_PAGE = f"{PAPER}/jqc_title_page.tex"
 
 PREAMBLE = r"""% ---------------------------------------------------------------------------
 % Journal of Quantitative Criminology submission -- ANONYMISED MANUSCRIPT.

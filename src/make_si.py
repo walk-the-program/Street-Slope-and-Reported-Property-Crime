@@ -23,15 +23,15 @@ from reportlab.platypus import (BaseDocTemplate, Frame, PageTemplate, Paragraph,
 sys.path.insert(0, os.path.dirname(__file__))
 from make_guide import INK2, RULE, TITLE, SUB, _s, parse
 
-OUT = "submission/supporting_information"
+OUT = "packages/submission/supporting_information"
 
 DOCS = [
-    ("PREREGISTRATION.md", "S1_Appendix.pdf", "S1 Appendix",
+    ("paper/PREREGISTRATION.md", "S1_Appendix.pdf", "S1 Appendix",
      "Analysis plan and deviations",
      "Hypotheses, inclusion rules and decision criteria fixed before the "
      "confirmatory dataset existed, followed by thirteen itemized deviations "
      "from that plan."),
-    ("SUPPLEMENT.md", "S2_Appendix.pdf", "S2 Appendix",
+    ("paper/SUPPLEMENT.md", "S2_Appendix.pdf", "S2 Appendix",
      "Reporting checklist and table index",
      "STROBE checklist, an index of every result table, and the full "
      "specification history including the four abandoned analysis phases."),

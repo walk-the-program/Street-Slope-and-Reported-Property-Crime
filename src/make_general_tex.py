@@ -22,8 +22,9 @@ from __future__ import annotations
 
 import re
 
-SRC = "plos_manuscript.tex"
-DST = "manuscript_general.tex"
+PAPER = "paper"
+SRC = f"{PAPER}/plos_manuscript.tex"
+DST = f"{PAPER}/manuscript_general.tex"
 
 PREAMBLE = r"""% ---------------------------------------------------------------------------
 % General-purpose version of the manuscript. Generated from plos_manuscript.tex

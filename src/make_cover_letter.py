@@ -19,8 +19,8 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
-SRC = "submission/cover_letter.md"
-DST = "Cover_Letter.pdf"
+SRC = "packages/submission/cover_letter.md"
+DST = "paper/Cover_Letter.pdf"
 INK = HexColor("#14181c")
 
 BODY = ParagraphStyle("body", fontName="Times-Roman", fontSize=10.5, leading=13.6,
