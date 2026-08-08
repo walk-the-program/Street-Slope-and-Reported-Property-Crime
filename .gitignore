@@ -10,8 +10,14 @@ __pycache__/
 # analytic units rather than republishing raw point records, and some municipal
 # portals restrict redistribution. Everything here is re-derivable from
 # data/interim/registry.csv and registry_arcgis.csv.
-data/raw/
-cache/
+#
+# Matched at any depth, not just the repository root: `data/raw/` on its own is
+# anchored by its slash, so a stray src/data/raw/ or an unpacked archive holding
+# nested/data/raw/ would not have been caught. This is the one exclusion that
+# carries an ethics commitment, so it should not depend on where the directory
+# happens to land.
+**/data/raw/
+**/cache/
 
 # Superseded intermediate panels. cells/ predates the building-footprint
 # exposure rebuild; cells_exposure/ is the version every reported result uses
@@ -26,15 +32,15 @@ data/interim/probe_raw.csv
 *.aux
 *.out
 *.synctex.gz
-outputs/logs/
+**/outputs/logs/
 
 # --- not part of this study ----------------------------------------------------
-# Unrelated coursework that happens to share this directory.
-4800_Paper.pdf
-NFL paper.pdf
-NFLELO 2.tex
-main.tex
-Tracy_Walker_3030_draft.pdf
+# Unrelated coursework that happens to share this directory. It all lives under
+# archive/, which is excluded wholesale further down, so the per-file rules that
+# used to sit here were vestigial -- and one of them spelled out the author's
+# name in a tracked file, which is the sort of thing this repository is
+# otherwise careful about. The directory rule is the one doing the work.
+archive/
 
 # Working documents kept local: an internal reference explicitly marked not for
 # circulation, and a commissioned external review of the manuscript.
@@ -47,8 +53,29 @@ deep-research-report.md
 # on, and the tables it produces. The paper, its supplement, the analysis plan,
 # the journal checklist and the conference deck live with the submission, not
 # here.
+#
+# The directory rules below are what actually does the work now, since every
+# manuscript file lives under paper/ and every assembled bundle under packages/.
+# Directory patterns with a trailing slash and no leading slash match at any
+# depth, so these hold wherever the directory is created.
+paper/
+packages/
+submission/
+jqc_submission/
+archive/
+
+# Individual filenames, kept as a second line of defence in case a document is
+# ever written outside those directories. This list is a denylist of exact
+# names, which is precisely how jqc_manuscript.tex got tracked once: the rule
+# named the PLOS manuscript and not the JQC one, so the anonymised manuscript,
+# the title page carrying the author's name and ORCID, and both full packages
+# sat in a public repository. Anything added here is a name that has already
+# escaped; prefer putting new documents under paper/.
 plos_manuscript.tex
 manuscript_general.tex
+jqc_manuscript.tex
+jqc_title_page.tex
+Cover_Letter.pdf
 PREREGISTRATION.md
 SUPPLEMENT.md
 SUBMISSION.md
@@ -58,17 +85,34 @@ DIRECTION.md
 PILOT_RESULTS.md
 talk_slides.html
 
-# The JQC build and both assembled submission packages. These were tracked by
-# accident: .gitignore named the PLOS manuscript but not the JQC one, so the
-# anonymised manuscript, the title page carrying the author's name and ORCID,
-# and both full packages were sitting in a public repository. That defeats the
-# point of double-blind review -- a reviewer searching a distinctive phrase from
-# the paper would land on the author's own GitHub account.
-jqc_manuscript.tex
-jqc_title_page.tex
-Cover_Letter.pdf
-submission/
-jqc_submission/
-paper/
-packages/
-archive/
+# Revise-and-resubmit correspondence, matched by shape rather than by exact
+# name. A review cycle generates rebuttals, revised title pages and reviewer
+# responses under names nobody can enumerate in advance, and every one of them
+# carries the author's identity into a double-blind submission.
+#
+# `*[Mm]anuscript*` is deliberately broad: a revised draft under a directory
+# nobody thought to exclude (paper2/, revision/, jqc_r1/) is the likeliest way
+# the paper gets tracked again. No tracked file matches it today. If a genuine
+# replication file ever needs one of these names, `git add -f` overrides.
+*[Mm]anuscript*
+*[Tt]itle_[Pp]age*
+*[Cc]over_[Ll]etter*
+*[Rr]ebuttal*
+*[Rr]esponse*[Rr]eview*
+*[Rr]esponse_to_*
+*[Rr]eviewer*[Rr]esponse*
+
+# --- manuscript generators ------------------------------------------------------
+# These render the paper, its title page, the cover letter and the supplement
+# from the master in paper/. None of them reproduces a number, none is called by
+# regen_all.py, and all of them read inputs under paper/ or packages/ that are
+# excluded above -- so in a fresh clone they could only fail on a missing file.
+# They also embedded the author's name, city, email and ORCID directly in
+# tracked source, which is how the title page stayed public after the file
+# itself was untracked. make_plos_figs.py is deliberately NOT here: regen_all.py
+# calls it and it only touches outputs/.
+src/make_jqc_tex.py
+src/make_general_tex.py
+src/make_cover_letter.py
+src/make_si.py
+src/make_guide.py
