@@ -8,8 +8,8 @@ Across nine American cities, recorded property crime is negatively associated wi
 street slope within census block groups — roughly **−6.9% per degree** in the four
 cities where terrain is well measured (95% CI [−9.51, −4.21]). The magnitude does not
 transport: the prediction interval for a new city runs from −13.7% to +0.5%. None of
-the four candidate mechanisms tested here accounts for the association, and the paper
-declines to offer a fifth it cannot test.
+the four candidate mechanisms tested here fully accounts for the association, and the
+paper declines to offer a fifth it cannot test.
 
 ---
 
