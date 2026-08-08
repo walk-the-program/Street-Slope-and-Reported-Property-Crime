@@ -73,16 +73,14 @@ analysis, investigation, methodology, software, validation, visualization, writi
 
 ## Still needs you
 
-1. **Add your city to the affiliation.** PLOS requires institution, city and country
-   at minimum. The title page currently reads *Independent Researcher, United States of
-   America*. Open `manuscript/plos_manuscript.tex`, find `\textbf{1}` near the top, and
-   make it read e.g. *Independent Researcher, Salt Lake City, Utah, United States of
-   America*. One line.
+**Compile the PDF and upload.** That is the whole list.
 
-2. **Register an ORCID iD** at orcid.org if you do not have one, and enter it in your
-   submission-system profile. PLOS requires this of the corresponding author.
+Two details for the submission form, both already settled:
 
-3. **Compile the PDF** and upload.
+- **Affiliation** is on the title page as *Independent Researcher, Salt Lake City,
+  Utah, United States of America*. Enter the same in the system.
+- **ORCID iD: 0009-0004-0283-2318.** This goes in your submission-system user
+  profile, not the manuscript. PLOS requires it of the corresponding author.
 
 ## A note on the affiliation
 
