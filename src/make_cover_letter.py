@@ -23,8 +23,8 @@ SRC = "submission/cover_letter.md"
 DST = "Cover_Letter.pdf"
 INK = HexColor("#14181c")
 
-BODY = ParagraphStyle("body", fontName="Times-Roman", fontSize=10.5, leading=14.2,
-                      textColor=INK, alignment=TA_LEFT, spaceAfter=9)
+BODY = ParagraphStyle("body", fontName="Times-Roman", fontSize=10.5, leading=13.6,
+                      textColor=INK, alignment=TA_LEFT, spaceAfter=8)
 META = ParagraphStyle("meta", parent=BODY, fontSize=10, textColor=HexColor("#555b61"),
                       spaceAfter=3)
 
@@ -70,10 +70,10 @@ def build():
                             topMargin=0.9 * inch, bottomMargin=0.75 * inch,
                             title="Cover letter", author="Walker Tracy")
     story = [Paragraph(dt.date.today().strftime("%B %-d, %Y"), META),
-             Spacer(1, 16)]
+             Spacer(1, 13)]
     for p in paras:
         story.append(Paragraph(inline(p), BODY))
-    story.append(Spacer(1, 10))
+    story.append(Spacer(1, 6))
     for line in sig_lines:
         if line.strip():
             story.append(Paragraph(inline(line.strip()), META))
