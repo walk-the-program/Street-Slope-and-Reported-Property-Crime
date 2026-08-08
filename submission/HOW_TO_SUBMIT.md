@@ -72,11 +72,7 @@ analysis, investigation, methodology, software, validation, visualization, writi
 
 ## Still needs you
 
-1. **Decide about Haberman & Kelsay.** The −7.72% per degree conversion of their
-   estimate comes from the published abstract and secondary sources; the full text
-   was never obtained (paywalled, repository returns 403). The manuscript says so
-   explicitly, which is defensible, but an interlibrary loan request would let you
-   verify it and delete the caveat.
+**Compile the PDF, then upload.** That is the whole list.
 
 ## A note on the affiliation
 
