@@ -28,6 +28,7 @@ recompile. Do not submit that version.
 | Supporting information | `supporting_information/S1_Appendix.pdf` |
 | Supporting information | `supporting_information/S2_Appendix.pdf` |
 | Supporting information | `supporting_information/S3_Data.csv` |
+| Cover letter | `cover_letter.md` — paste the text, or save as PDF and upload |
 
 Figure order follows citation order in the text, which is not the order the files
 were originally created in. Upload them as numbered here.
@@ -72,7 +73,16 @@ analysis, investigation, methodology, software, validation, visualization, writi
 
 ## Still needs you
 
-**Compile the PDF, then upload.** That is the whole list.
+1. **Add your city to the affiliation.** PLOS requires institution, city and country
+   at minimum. The title page currently reads *Independent Researcher, United States of
+   America*. Open `manuscript/plos_manuscript.tex`, find `\textbf{1}` near the top, and
+   make it read e.g. *Independent Researcher, Salt Lake City, Utah, United States of
+   America*. One line.
+
+2. **Register an ORCID iD** at orcid.org if you do not have one, and enter it in your
+   submission-system profile. PLOS requires this of the corresponding author.
+
+3. **Compile the PDF** and upload.
 
 ## A note on the affiliation
 
